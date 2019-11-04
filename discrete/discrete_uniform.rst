@@ -55,6 +55,17 @@ Probability mass function
 ----
 
 
+Moments
+-------
+
+Mean: :math:`\displaystyle{\frac{y_\mathrm{low} + y_\mathrm{high}}{2}}`
+ 
+Variance: :math:`\displaystyle{\frac{(y_\mathrm{high} - y_\mathrm{low} + 1)^2 - 1}{12}}`
+
+
+----
+
+
 Usage
 -----
 

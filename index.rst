@@ -8,7 +8,7 @@ Probability Distribution Explorer
 
 .. toctree::
    :maxdepth: 1
-   :caption: Univariate discrete distributions
+   :caption: Univariate discrete
 
    discrete/bernoulli
    discrete/binomial
@@ -21,6 +21,14 @@ Probability Distribution Explorer
 
 .. toctree::
    :maxdepth: 1
-   :caption: Univariate continuous distributions
+   :caption: Univariate continuous
+
+   continuous/beta
+   continuous/exponential
+   continuous/gamma
+   continuous/inverse_gamma
+   continuous/normal
+   continuous/student_t
+   continuous/uniform
 
 

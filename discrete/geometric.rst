@@ -52,6 +52,17 @@ Probability mass function
 ----
 
 
+Moments
+-------
+
+Mean: :math:`\displaystyle{\frac{1-\theta}{\theta}}`
+ 
+Variance: :math:`\displaystyle{\frac{1-\theta}{\theta^2}}`
+
+
+----
+
+
 Usage
 -----
 

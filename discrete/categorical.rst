@@ -62,6 +62,15 @@ Probability mass function
 ----
 
 
+Moments
+-------
+
+Moments are not defined for a Categorical distribution because the value of :math:`y` is not necessarily numeric.
+
+
+----
+
+
 Usage
 -----
 

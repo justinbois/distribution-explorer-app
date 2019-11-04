@@ -82,8 +82,6 @@ exclude_patterns = [
     '**Thumbs.db',
     '**.DS_Store',
     '**.ipynb_checkpoints',
-    '**_solution.ipynb',
-    'homework/remove_solutions.py'
 ]
 
 # The name of the Pygments (syntax highlighting) style to use.

@@ -54,6 +54,17 @@ Probability mass function
 ----
 
 
+Moments
+-------
+
+Mean: :math:`\lambda`
+
+Variance: :math:`\lambda`
+
+
+----
+
+
 Usage
 -----
 

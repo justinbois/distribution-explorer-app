@@ -58,6 +58,16 @@ Probability mass function
 
 ----
 
+Moments
+-------
+
+Mean: :math:`\theta`
+ 
+Variance: :math:`\theta(1-\theta)`
+
+
+----
+
 
 Usage
 -----

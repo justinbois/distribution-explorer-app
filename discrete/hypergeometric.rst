@@ -54,6 +54,18 @@ Probability mass function
 ----
 
 
+Moments
+-------
+
+Mean: :math:`\displaystyle{N\,\frac{a}{a+b}}`
+
+
+Variance: :math:`\displaystyle{N\,\frac{ab}{(a + b)^2}\,\frac{a+b-N}{a+b-1}}`
+
+
+----
+
+
 Usage
 -----
 

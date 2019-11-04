@@ -71,6 +71,16 @@ See the notes below for other parametrizations.
 
 ----
 
+Moments
+-------
+
+Mean: :math:`\displaystyle{\frac{\alpha}{\beta}}`
+
+Variance: :math:`\displaystyle{\frac{\alpha(1+\beta)}{\beta^2}}`
+
+
+----
+
 
 Usage
 -----
