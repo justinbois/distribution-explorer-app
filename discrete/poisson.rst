@@ -9,7 +9,7 @@ Poisson distribution
 Story
 -----
 
-Rare events occur with a rate :math:`\lambda` per unit time. There is no "memory" of previous events; i.e., that rate is independent of time. A process that generates such events is called a *Poisson process*. The occurrence of a rare event in this context is referred to as an arrival. The number :math:`n` of arrivals in unit time is Poisson distributed.
+The number :math:`n` of arrivals of a Poisson process in unit time is Poisson distributed.
 
 
 ----
@@ -27,7 +27,7 @@ The number of mutations in a strand of DNA per unit length (since mutations are 
 Parameters
 ----------
 
-The single parameter is the rate :math:`\lambda` of the rare events occurring.
+The single parameter is the rate :math:`\lambda` of the arrival of the Poisson process.
 
 
 ----

@@ -10,7 +10,7 @@ Bernoulli distribution
 Story
 -----
 
-A *Bernoulli trial* is an experiment that has two outcomes that can be encoded as success (:math:`y=1`) or failure (:math:`y = 0`). The result :math:`y` of a Bernoulli trial is Bernoulli distributed.
+The result :math:`y` of a single Bernoulli trial is Bernoulli distributed.
 
 
 ----
