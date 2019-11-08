@@ -91,6 +91,7 @@ Related distributions
 - The :ref:`bernoulli` is a special case of the Binomial distribution where :math:`N=1`.
 - In the limit of :math:`N\to\infty` and :math:`\theta\to 0` such that the quantity :math:`N\theta` is fixed, the Binomial distribution becomes a :ref:`Poisson` with parameter :math:`N\theta`.
 - The Binomial distribution is a limit of the :ref:`hypergeometric`. Considering the Hypergeometric distribution parametrized by :math:`N`, :math:`a`, and :math:`b`, and taking the limit of :math:`a+b\to\infty` such that :math:`a/(a+b)` is fixed, we get a Binomial distribution with parameters :math:`N=N` and :math:`\theta = a/(a+b)`.
+- The Binomial distribution is a special case of the :ref:`multinomial` when :math:`K = 2`.
 
 
 ----

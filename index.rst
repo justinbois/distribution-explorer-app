@@ -42,4 +42,11 @@ Welcome to the probability distribution explorer. This is a tool for you to expl
    continuous/uniform
    continuous/weibull
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Multivariate discrete
+
+   multivariate_discrete/multinomial
+
+
 
