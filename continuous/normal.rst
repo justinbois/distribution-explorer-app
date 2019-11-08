@@ -10,7 +10,7 @@ Normal distribution
 Story
 -----
 
-Any quantity that emerges as the sum of a large number of subprocesses tends to be Gaussian distributed provided none of the subprocesses is very broadly distributed.
+Any quantity that emerges as the sum of a large number of subprocesses tends to be Normally distributed provided none of the subprocesses is very broadly distributed.
 
 
 ----

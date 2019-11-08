@@ -86,6 +86,7 @@ Related distributions
 
 - The Exponential distribution is the continuous analog of the :ref:`geometric`. The "rate" in the Exponential distribution is analogous to the probability of success of the Bernoulli trial in the Geometric distribution.
 - The Exponential distribution is a special case of the :ref:`gamma` with parameter :math:`\alpha = 1`.
+- The Exponential distribution is a special case of the :ref:`weibull` with parameter :math:`\alpha - 1`.
 
 ----
 
