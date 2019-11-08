@@ -85,7 +85,7 @@ We plot a PDF as a smooth curve. The curve only appears for values of the x-axis
 
 	# Make the plot
 	p = bokeh.plotting.figure(height=200, width=300, x_axis_label='x', 
-	y_axis_label='f(x; 1.68, 5)', title='Gamma PDF', x_range=[-0.15, 4])
+	y_axis_label='f(x; 1.68, 5)', title='Gamma PDF', x_range=[-0.15, 4], tools="save")
 	p.line(x, y_pdf, line_width=2)
 
 	bokeh.io.show(p)
@@ -114,7 +114,7 @@ Since they take on discrete values, we plot PMFs differently. The convention in 
 
 	# Make the plot
 	p = bokeh.plotting.figure(height=200, width=300, x_axis_label='n', 
-	y_axis_label='f(n; 20, 0.34)', title='Binomial PMF')
+	y_axis_label='f(n; 20, 0.34)', title='Binomial PMF', tools="save")
 
 	p.circle(x, y_pmf, size=5)
 	p.segment(x0=x, x1=x, y0=0, y1=y_pmf, line_width=2)
@@ -145,7 +145,7 @@ Plots of CDFs for continuous distributions are plotted as smooth curves. Taking 
 
 	# Make the plot
 	p = bokeh.plotting.figure(height=200, width=300, x_axis_label='x', 
-	y_axis_label='F(x; 1.68, 5)', title='Gamma CDF', x_range=[-0.15, 4])
+	y_axis_label='F(x; 1.68, 5)', title='Gamma CDF', x_range=[-0.15, 4], tools="save")
 	p.line(x, y_cdf, line_width=2)
 
 	bokeh.io.show(p)
@@ -184,7 +184,7 @@ For discrete distributions, I plot the CDFs as "staircases," as shown below.
 	                          plot_width=300,
 	                          x_axis_label='n',
 	                          y_axis_label='F(n; 20, 0.34)',
-	                          title='Binomial CDF')
+	                          title='Binomial CDF', tools="save")
 	p.line(x_c, y_c, line_width=2)
 	bokeh.io.show(p)
 
@@ -206,7 +206,7 @@ The CDF appears to be multivalued at the vertical lines of the staircase. It is 
 	                          plot_width=350,
 	                          x_axis_label='n',
 	                          y_axis_label='F(n; 20, 0.34)',
-	                          title='Binomial CDF')
+	                          title='Binomial CDF', tools="save")
 	p.segment(x[:-1], y[:-1], x[1:], y[:-1], line_width=2)
 	p.ray(0, 0, angle=np.pi, length=0, line_width=2)
 	p.ray(x[-1], 1, angle=0, length=0, line_width=2)
@@ -271,7 +271,7 @@ For a discrete distribution with PMF :math:`f(x)`, the expectation of :math:`g(x
 	E(g(x)) = \sum_i  g(x_i) f(x_i).
 	\end{align}
 
-The :math:`n`th moment of a distribution is :math:`E(x^n)`. The first moment of a distribution is called the **mean**, and here we will denote it at :math:`\mu`. We define the :math:`n`th **central moment** as :math:`E((x-\mu)^n)`.
+The *n*th moment of a distribution is :math:`E(x^n)`. The first moment of a distribution is called the **mean**, and here we will denote it at :math:`\mu`. We define the :math:`n`th **central moment** as :math:`E((x-\mu)^n)`.
 
 Perhaps the two most important moments of a distribution are the first moment (the mean) and the second central moment, :math:`E((x-\mu)^n)`, which is called the **variance**. For each distribution I display its mean and variance, if they exist.
 

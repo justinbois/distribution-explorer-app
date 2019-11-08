@@ -111,7 +111,7 @@ Notes
 
 ----
 
-LinksUPDATELINKS
+Links
 -----
 
 - `Wikipedia <https://en.wikipedia.org/wiki/Multivariate_normal_distribution>`_

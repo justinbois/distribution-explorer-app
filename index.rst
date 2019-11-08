@@ -8,7 +8,7 @@ Welcome to the probability distribution explorer. This is a tool for you to expl
    :caption: Background
 
    background/motivation
-   background/review_of_dists
+   background/review_of_key_concepts
    background/software
    background/resources
    background/vignette_contents
@@ -52,6 +52,7 @@ Welcome to the probability distribution explorer. This is a tool for you to expl
    :maxdepth: 1
    :caption: Multivariate continuous
 
+   multivariate_continuous/dirichlet
    multivariate_continuous/multivariate_normal
 
 
