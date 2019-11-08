@@ -48,5 +48,10 @@ Welcome to the probability distribution explorer. This is a tool for you to expl
 
    multivariate_discrete/multinomial
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Multivariate continuous
+
+   multivariate_continuous/multivariate_normal
 
 

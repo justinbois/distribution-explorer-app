@@ -27,7 +27,7 @@ There are two alleles in a population, A and a. Each individual may have genotyp
 Parameters
 ----------
 
-:math:`N`, the total number of trials, and :math:`\boldsymbol{\theta} = \left\{\theta_1, \theta_2, \ldots,\theta_K\right\}, the probabilities of each outcome. Note that :math:`\sum_i \theta_i = 1` and there is the further restriction that :math:`N = \sum_i y_i`.
+:math:`N`, the total number of trials, and :math:`\boldsymbol{\theta} = \left\{\theta_1, \theta_2, \ldots,\theta_K\right\}`, the probabilities of each outcome. Note that :math:`\sum_i \theta_i = 1` and there is the further restriction that :math:`N = \sum_i y_i`.
 
 
 ----
