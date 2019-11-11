@@ -9,7 +9,7 @@ Hypergeometric distribution
 Story
 -----
 
-Consider an urn with :math:`a` white balls and :math:`b` black balls. Draw :math:`N` balls from this urn without replacement. The number white balls drawn, :math:`N`, is Hypergeometrically distributed.
+Consider an urn with :math:`a` white balls and :math:`b` black balls. Draw :math:`N` balls from this urn without replacement. The number white balls drawn, :math:`n`, is Hypergeometrically distributed.
 
 
 ----

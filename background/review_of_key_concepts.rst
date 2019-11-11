@@ -271,7 +271,7 @@ For a discrete distribution with PMF :math:`f(x)`, the expectation of :math:`g(x
 	E(g(x)) = \sum_i  g(x_i) f(x_i).
 	\end{align}
 
-The *n*th moment of a distribution is :math:`E(x^n)`. The first moment of a distribution is called the **mean**, and here we will denote it at :math:`\mu`. We define the :math:`n`th **central moment** as :math:`E((x-\mu)^n)`.
+The nth moment of a distribution is :math:`E(x^n)`. The first moment of a distribution is called the **mean**, and here we will denote it at :math:`\mu`. We define the :math:`n`th **central moment** as :math:`E((x-\mu)^n)`.
 
 Perhaps the two most important moments of a distribution are the first moment (the mean) and the second central moment, :math:`E((x-\mu)^n)`, which is called the **variance**. For each distribution I display its mean and variance, if they exist.
 
