@@ -16,7 +16,7 @@ For each probability distribution, the following are typically presented.
 - Interactive plots of the PMF/PDF and CDF of the distribution.
 - Links to the Wikipedia page for the distribution and to documentation from NumPy, SciPy, and Stan.
 
-For some distributions, not all of these are show.
+For some distributions, not all of these are shown.
 
 I omit analytical expression for the CDF because CDFs are often expressed as special functions, such as `regularized incomplete beta functions <https://en.wikipedia.org/wiki/Beta_function#Incomplete_beta_function>`_ or `error functions <https://en.wikipedia.org/wiki/Error_function>`_. They can also be easily looked up. We mainly use them for comparing ECDFs in plots, and we can use the ``scipy.stats`` module to just compute them for plotting.
 

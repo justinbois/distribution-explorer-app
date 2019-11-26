@@ -47,7 +47,7 @@ Probability density function
 Moments
 -------
 
-Mean: :math: `\displaystyle{\frac{\beta}{\alpha - 1}}` for :math:`\alpha > 1`; for :math:`\alpha \le 1`, the mean is undefined.
+Mean: :math:`\displaystyle{\frac{\beta}{\alpha - 1}}` for :math:`\alpha > 1`; for :math:`\alpha \le 1`, the mean is undefined.
  
 Variance: :math:`\displaystyle{\frac{\beta^2}{(\alpha-1)^2(\alpha-2)}}` for :math:`\alpha > 2`; for :math:`\alpha \le 2`, the variance is undefined.
 

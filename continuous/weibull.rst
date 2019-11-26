@@ -48,7 +48,7 @@ Probability density function
 .. math::
 
 	\begin{align}
-	f(y;\alpha, \sigma) = \frac{\alpha}{\sigma}\left(\frac{y}{\sigma}\right)^{\alpha - 1}\,\mathrm{e}^{-y/\sigma)^\alpha.
+	f(y;\alpha, \sigma) = \frac{\alpha}{\sigma}\left(\frac{y}{\sigma}\right)^{\alpha - 1}\,\mathrm{e}^{-(y/\sigma)^\alpha}.
 	\end{align}
 
 

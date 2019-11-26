@@ -78,8 +78,16 @@ Related distributions
 
 - In the :math:`\nu \to \infty` limit, the Student-t distribution becomes a :ref:`normal`.
 - The :ref:`cauchy` distribution is a special case of the Student-t distribution in which :math:`\nu = 1`.
-- Only the standard Student-t distribution (:math:`\mu = 0` and :math:`\sigma = 1`) is available in NumPy. You can still draw out of the Student-t distribution by performing a transformation on the samples out of the standard Student-t distribution, as shown in the usage, above.
 - We get this distribution whenever we marginalize an unknown :math:`\sigma` out of a :ref:`normal` with an improper prior on :math:`\sigma` of :math:`1/\sigma`.
+
+
+----
+
+
+Notes
+-----
+
+- Only the standard Student-t distribution (:math:`\mu = 0` and :math:`\sigma = 1`) is available in NumPy. You can still draw out of the Student-t distribution by performing a transformation on the samples out of the standard Student-t distribution, as shown in the usage, above.
 
 
 ----

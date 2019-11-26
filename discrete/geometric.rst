@@ -86,7 +86,8 @@ Related distributions
 - The continuous analog of the Geometric distribution is the :ref:`exponential`. 
 
 
----
+----
+
 
 Notes
 -----

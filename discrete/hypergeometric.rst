@@ -103,7 +103,7 @@ Notes
     f(n;M,a,N) = \frac{\begin{pmatrix}a \\ n\end{pmatrix} \begin{pmatrix}M-a \\ N-n\end{pmatrix}}{\begin{pmatrix}M \\ N\end{pmatrix}}.
     \end{align}
 
-- Although NumPy and Stan use the same parametrization, not the difference in the ordering of the arguments.
+- Although NumPy and Stan use the same parametrization, note the difference in the ordering of the arguments.
 
 
 ----

@@ -91,7 +91,7 @@ Related distributions
 ---------------------
 
 - The :ref:`discrete_uniform` is a special case where all :math:`\theta_y` are equal.
-- The :ref:`bernoulli` is a special case where there are two categories that can be encoded as having outcomes of zero or one. In this case, the parameter for the Bernoulli distribution is :math:\theta = \theta_1 = 1 - \theta_2`.
+- The :ref:`bernoulli` is a special case where there are two categories that can be encoded as having outcomes of zero or one. In this case, the parameter for the Bernoulli distribution is :math:`\theta = \theta_1 = 1 - \theta_2`.
 
 
 ----
