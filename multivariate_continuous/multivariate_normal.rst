@@ -53,7 +53,7 @@ Probability density function
 .. math::
 
 	\begin{align}
-	f(\mathbf{y};\boldsymbol{\mu}, \mathsf{\Sigma}) = \frac{1}{\sqrt{(2\pi)^K \mathrm{det}\mathsf{\Sigma}}}\,\exp\left[-\frac{1}{2}(\mathbf{y} - \boldsymbol{\mu})^\mathsf{T} \cdot \mathsf{\Sigma} \cdot (\mathbf{y} - \boldsymbol{\mu})\right].
+	f(\mathbf{y};\boldsymbol{\mu}, \mathsf{\Sigma}) = \frac{1}{\sqrt{(2\pi)^K \mathrm{det}\mathsf{\Sigma}}}\,\exp\left[-\frac{1}{2}(\mathbf{y} - \boldsymbol{\mu})^\mathsf{T} \cdot \mathsf{\Sigma}^{-1} \cdot (\mathbf{y} - \boldsymbol{\mu})\right].
 	\end{align}
 
 
