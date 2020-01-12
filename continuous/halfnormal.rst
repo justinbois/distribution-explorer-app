@@ -41,9 +41,10 @@ Probability density function
 .. math::
 
 	\begin{align}
-	f(y;\mu, \sigma) = \left\{\begin{array}{cll}\sqrt{\frac{2}{\pi\sigma^2}}\,\mathrm{e}^{-(y-\mu)^2/2\sigma^2} & & y \ge \mu \\[1em]
+	f(y;\mu, \sigma) = \left\{\begin{array}{cll}
+    \sqrt{\frac{2}{\pi\sigma^2}}\,\mathrm{e}^{-(y-\mu)^2/2\sigma^2} &  & y \ge \mu \\[1em]
     0 & & \text{otherwise}.
-    \end{\array}
+    \end{array}\right.
 	\end{align}
 
 ----
@@ -52,9 +53,9 @@ Probability density function
 Moments
 -------
 
-Mean: :math:`\mu + \sqrt{\frac{2\sigma^2}{\pi}}`
+Mean: :math:`\displaystyle{\mu + \sqrt{\frac{2\sigma^2}{\pi}}}`
 
-Variance: :math:`\left(1 - \frac{2}{\pi}\right)\sigma^2`
+Variance: :math:`\displaystyle{\left(1 - \frac{2}{\pi}\right)\sigma^2}`
 
 
 ----
@@ -91,7 +92,7 @@ Related distributions
 Notes
 -----
 
-- In Stan, a Half-Normal is defined by putting bounds on the variable and then using a Normal distribution.
+- In Stan, a Half-Normal is defined by putting a lower bound of :math:`\mu` on the variable and then using a Normal distribution with location parameter :math:`\mu`.
 - The Half-Normal distribution with :math:`\mu = 0` is a useful prior for nonnegative parameters that should not be too large and may be very close to zero.
 
 
@@ -107,7 +108,7 @@ PDF and CDF plots
     import bokeh.io
     import distribution_explorer
 
-    bokeh.io.show(distribution_explorer.explore('normal'))
+    bokeh.io.show(distribution_explorer.explore('halfnormal'))
 
 ----
 
