@@ -34,6 +34,7 @@ Welcome to the probability distribution explorer. This is a tool for you to expl
    continuous/cauchy
    continuous/exponential
    continuous/gamma
+   continuous/halfnormal
    continuous/inverse_gamma
    continuous/lognormal
    continuous/normal
