@@ -120,7 +120,7 @@ Notes
        f(y;\mu,\phi) = \frac{\Gamma(y+\phi)}{\Gamma(\phi) \, y!}\,\left(\frac{\phi}{\mu+\phi}\right)^\phi\left(\frac{\mu}{\mu+\phi}\right)^y. 
     \end{align}
 
-These parameters are related to the parametrization above by :math:`\phi = \alpha` and :math:`\mu = \alpha/\beta`. In the limit of :math:`\phi\to\infty`, which can be taken for the PMF, the Negative Binomial distribution becomes Poisson with parameter :math:`\mu`. This also gives meaning to the parameters :math:`\mu` and :math:`\phi; :math:`\mu` is the mean of the Negative Binomial, and :math:`\phi` controls extra width of the distribution beyond Poisson. The smaller :math:`\phi` is, the broader the distribution.
+These parameters are related to the parametrization above by :math:`\phi = \alpha` and :math:`\mu = \alpha/\beta`. In the limit of :math:`\phi\to\infty`, which can be taken for the PMF, the Negative Binomial distribution becomes Poisson with parameter :math:`\mu`. This also gives meaning to the parameters :math:`\mu` and :math:`\phi`; :math:`\mu` is the mean of the Negative Binomial, and :math:`\phi` controls extra width of the distribution beyond Poisson. The smaller :math:`\phi` is, the broader the distribution.
 
 - In Stan, the Negative Binomial distribution using the :math:`(\mu,\phi)` parametrization is called ``neg_binomial_2``.
 - SciPy and NumPy use yet another parametrization. The PMF for SciPy is
