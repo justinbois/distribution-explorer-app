@@ -11,7 +11,7 @@ Story
 
 We perform a series of Bernoulli trials with probability :math:`\beta/(1+\beta)` of success. The number of failures, :math:`y`, before we get :math:`\alpha` successes is Negative Binomially distributed. 
 
-An equivalent story is that the sum of :math:`\alpha` independent and identically Gamma distributed variables is Negative Binomially distributed. For this reason, the Negative Binomial distribution is sometimes called the Gamma-Poisson distribution.
+An equivalent story is this: Draw a parameter :math:`\lambda` out of a :ref:`gamma` with parameters :math:`\alpha` and :math:`beta`. Then draw a number :math:`y` out of a :ref:`poisson` with parameter :math:`\lambda`. Then :math:`y` is Negative Binomially distributed with parameters :math:`\alpha` and :math:`\beta`. For this reason, the Negative Binomial distribution is sometimes called the Gamma-Poisson distribution.
 
 
 ----
@@ -90,7 +90,11 @@ Usage
 +=======================================+=======================================================+
 | **NumPy**                             | ``rg.negative_binomial(alpha, beta/(1+beta))``        |
 +---------------------------------------+-------------------------------------------------------+
+| **NumPy with (µ, φ) parametrization** | ``rg.negative_binomial(phi, phi/(mu+phi))``          |
++---------------------------------------+-------------------------------------------------------+
 | **SciPy**                             | ``scipy.stats.nbinom(alpha, beta/(1+beta))``          |
++---------------------------------------+-------------------------------------------------------+
+| **SciPy with (µ, φ) parametrization** | ``scipy.stats.nbinom(phi, phi/(mu+phi))``            |
 +---------------------------------------+-------------------------------------------------------+
 | **Stan**                              | ``neg_binomial(alpha, beta)``                         |
 +---------------------------------------+-------------------------------------------------------+
