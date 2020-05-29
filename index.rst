@@ -34,7 +34,9 @@ Welcome to the probability distribution explorer. This is a tool for you to expl
    continuous/cauchy
    continuous/exponential
    continuous/gamma
+   continuous/halfcauchy
    continuous/halfnormal
+   continuous/halfstudent_t
    continuous/inverse_gamma
    continuous/lognormal
    continuous/normal
@@ -54,6 +56,7 @@ Welcome to the probability distribution explorer. This is a tool for you to expl
    :caption: Multivariate continuous
 
    multivariate_continuous/dirichlet
+   multivariate_continuous/lkj
    multivariate_continuous/multivariate_normal
 
 

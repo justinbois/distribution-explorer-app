@@ -28,7 +28,7 @@ The Half-Normal distribution is parametrized by a positive scale parameter :math
 Support
 -------
 
-The Normal distribution is supported on the set of all real numbers that are greater than or equal to :math:`\mu`, that is on :math:`[\mu, \infty)`.
+The Half-Normal distribution is supported on the set of all real numbers that are greater than or equal to :math:`\mu`, that is on :math:`[\mu, \infty)`.
 
 
 
@@ -83,7 +83,8 @@ Usage
 Related distributions
 ---------------------
 
-- The :ref:`normal`, distribution is obviously closely related. The Half-Normal is simply a truncated Normal distribution where only values at the peak or two its right have nonzero probability density.
+- The :ref:`normal`, distribution is obviously closely related. The Half-Normal is simply a truncated Normal distribution where only values at the peak or to its right have nonzero probability density.
+- The Half-Normal distribution is the :math:`\nu\to\infty` limit of the :ref:`half_student_t`.
 
 
 ----

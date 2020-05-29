@@ -69,7 +69,7 @@ Usage
 +-----------------+--------------------------------------+
 | Package         | Syntax                               |
 +=================+======================================+
-| **NumPy**       | ``rg.geometric(theta)``              |
+| **NumPy**       | ``rg.geometric(theta) - 1``          |
 +-----------------+--------------------------------------+
 | **SciPy**       | ``scipy.stats.geom(theta, loc=-1)``  |
 +-----------------+--------------------------------------+
@@ -93,7 +93,7 @@ Notes
 -----
 
 - The Geometric distribution is not implemented in Stan. You can instead use a :ref:`negative_binomial` fixing the parameter :math:`\alpha` to be unity and relating the parameter :math:`\beta` of the Negative Binomial distribution to :math:`\theta` as :math:`\theta = \beta/(1+\beta)`.
-- The Geometric distribution is defined differently in SciPy, replacing :math:`y` with :math:`y-1`. In SciPy's parametrization the Geometric distribution describes the number of successive Bernoulli *trials* (not just the failures; the success is included) necessary to get a success. To adjust for this while still using the PMF defined here, we use the ``loc=-1`` kwarg.
+- The Geometric distribution is defined differently in Numpy and SciPy, replacing :math:`y` with :math:`y-1`. In this parametrization the Geometric distribution describes the number of successive Bernoulli *trials* (not just the failures; the success is included) necessary to get a success. To adjust for this while still using the PMF defined here, we use the ``loc=-1`` keyword argument in the SciPy implementation and we subtract one from the random numbers generated using Numpy.
 
 ----
 

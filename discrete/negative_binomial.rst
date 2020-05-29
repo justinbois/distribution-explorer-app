@@ -11,7 +11,7 @@ Story
 
 We perform a series of Bernoulli trials with probability :math:`\beta/(1+\beta)` of success. The number of failures, :math:`y`, before we get :math:`\alpha` successes is Negative Binomially distributed. 
 
-An equivalent story is this: Draw a parameter :math:`\lambda` out of a :ref:`gamma` with parameters :math:`\alpha` and :math:`beta`. Then draw a number :math:`y` out of a :ref:`poisson` with parameter :math:`\lambda`. Then :math:`y` is Negative Binomially distributed with parameters :math:`\alpha` and :math:`\beta`. For this reason, the Negative Binomial distribution is sometimes called the Gamma-Poisson distribution.
+An equivalent story is this: Draw a parameter :math:`\lambda` out of a :ref:`gamma` with parameters :math:`\alpha` and :math:`\beta`. Then draw a number :math:`y` out of a :ref:`poisson` with parameter :math:`\lambda`. Then :math:`y` is Negative Binomially distributed with parameters :math:`\alpha` and :math:`\beta`. For this reason, the Negative Binomial distribution is sometimes called the Gamma-Poisson distribution.
 
 
 ----
@@ -90,11 +90,11 @@ Usage
 +=======================================+=======================================================+
 | **NumPy**                             | ``rg.negative_binomial(alpha, beta/(1+beta))``        |
 +---------------------------------------+-------------------------------------------------------+
-| **NumPy with (µ, φ) parametrization** | ``rg.negative_binomial(phi, phi/(mu+phi))``          |
+| **NumPy with (µ, φ) parametrization** | ``rg.negative_binomial(phi, phi/(mu+phi))``           |
 +---------------------------------------+-------------------------------------------------------+
 | **SciPy**                             | ``scipy.stats.nbinom(alpha, beta/(1+beta))``          |
 +---------------------------------------+-------------------------------------------------------+
-| **SciPy with (µ, φ) parametrization** | ``scipy.stats.nbinom(phi, phi/(mu+phi))``            |
+| **SciPy with (µ, φ) parametrization** | ``scipy.stats.nbinom(phi, phi/(mu+phi))``             |
 +---------------------------------------+-------------------------------------------------------+
 | **Stan**                              | ``neg_binomial(alpha, beta)``                         |
 +---------------------------------------+-------------------------------------------------------+
@@ -126,7 +126,14 @@ Notes
 
 These parameters are related to the parametrization above by :math:`\phi = \alpha` and :math:`\mu = \alpha/\beta`. In the limit of :math:`\phi\to\infty`, which can be taken for the PMF, the Negative Binomial distribution becomes Poisson with parameter :math:`\mu`. This also gives meaning to the parameters :math:`\mu` and :math:`\phi`; :math:`\mu` is the mean of the Negative Binomial, and :math:`\phi` controls extra width of the distribution beyond Poisson. The smaller :math:`\phi` is, the broader the distribution.
 
-- In Stan, the Negative Binomial distribution using the :math:`(\mu,\phi)` parametrization is called ``neg_binomial_2``.
+In this parametrization, the pertinent moments are
+
+Mean: :math:`\displaystyle{\mu}`
+
+Variance: :math:`\displaystyle{\mu\left(1 + \frac{\mu}{\phi}\right)}`.
+
+In Stan, the Negative Binomial distribution using the :math:`(\mu,\phi)` parametrization is called ``neg_binomial_2``.
+
 - SciPy and NumPy use yet another parametrization. The PMF for SciPy is
 
 .. math::
@@ -135,7 +142,13 @@ These parameters are related to the parametrization above by :math:`\phi = \alph
        f(y;n, p) = \frac{\Gamma(y+n)}{\Gamma(n) \, y!}\,p^n \left(1-p\right)^y. 
     \end{align}
 
-The parameter :math:`p` is the probability of success of a Bernoulli trial. The parameters are related to the others we have defined by :math:`n=\alpha=\phi` and :math:`p=\beta/(1+\beta) = \phi/(\mu+\phi)`.
+The parameter :math:`1-p` is the probability of success of a Bernoulli trial (as defined in the story above). The parameters are related to the others we have defined by :math:`n=\alpha=\phi` and :math:`p=\beta/(1+\beta) = \phi/(\mu+\phi)`. In this parametrization, the pertinent moments are
+
+Mean: :math:`\displaystyle{n\,\frac{1-p}{p}}`
+
+Variance: :math:`\displaystyle{n\,\frac{1-p}{p^2}}`.
+
+Note that Wikipedia uses this parametrization except defining :math:`p` to be the probability of *failure* of a Bernoulli trial, in accordance with the story above.
 
 ----
 

@@ -18,7 +18,7 @@ The story of the Student-t distribution largely derives from its relationships w
 Parameters
 ----------
 
-The Student-t distribution is symmetrically peaked, and its peak is located at :math:`\mu`, the location paramter. The peak's width is dictated by scale parameter :math:`\sigma`, which is positive. Finally, we define the shape parameter, called "degrees of freedom," as :math:`\nu`. This last parameter imparts the distribution with heavy tails.
+The Student-t distribution is symmetrically peaked, and its peak is located at :math:`\mu`, the location paramter. The peak's width is dictated by scale parameter :math:`\sigma`, which is positive. Finally, the shape parameter, called "degrees of freedom," is :math:`\nu`. This last parameter imparts the distribution with heavy tails for small :math:`\nu`.
 
 ----
 
