@@ -107,11 +107,13 @@ Usage of Stan
 We follow `Stan's conventions for probability functions <https://mc-stan.org/docs/2_21/functions-reference/conventions-for-probability-functions.html>`_. Within a Stan program specifying a model, we would write 
 
 .. code::
+
 	y ~ normal(mu, sigma);
 
 to specify that ``y`` is Normally distributed with parameters ``mu`` and ``sigma``. If we want to draw a random number from a distribution using Stan, we add a ``_rng`` suffix to the probability function name. To draw a random number from a Normal distribution and store it as ``x``, we do
 
 .. code::
+
 	x = normal_rng(mu, sigma);
 
 Other suffixes are available, and the call signature can change depending on the suffix. For example, to compute the value of the logarithm of the PDF of the Normal distribution at point ``x``, we use ``normal_lpdf(x | mu, sigma)``.
