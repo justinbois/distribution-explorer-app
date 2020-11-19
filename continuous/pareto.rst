@@ -98,7 +98,7 @@ Notes
     \right.
     \end{align}
 
-Thus, the power law is clear. A plot of the CCDF on a log-log plot yields a line with slope equal to :math:`-\alpha`, as show below for :math:`y_\mathrm{min} = 1` and :math:`\alpha = 2`.
+Thus, the power law is clear. A plot of the CCDF on a log-log plot yields a line with slope equal to :math:`-\alpha`, as shown below for :math:`y_\mathrm{min} = 1` and :math:`\alpha = 2`.
 
 .. bokeh-plot::
     :source-position: none
