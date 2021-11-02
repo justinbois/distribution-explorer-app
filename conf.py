@@ -25,7 +25,7 @@ import recommonmark.transform
 # -- Project information -----------------------------------------------------
 
 project = 'Probability Distribution Explorer'
-copyright = '2019, Justin Bois'
+copyright = '2021, Justin Bois'
 author = 'Justin Bois'
 
 # The full version, including alpha/beta/rc tags
@@ -139,7 +139,7 @@ html_last_updated_fmt = ''
 html_static_path = ['_static']
 
 def setup(app):
-    app.add_stylesheet('custom.css')
+    app.add_css_file('custom.css')
     app.add_config_value('recommonmark_config', {
         'auto_toc_tree_section': 'Contents',
         'enable_eval_rst': True,
