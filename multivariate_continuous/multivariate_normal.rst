@@ -107,7 +107,7 @@ Notes
 -----
 
 - The covariance matrix may also be written as :math:`\mathsf{\Sigma} = \mathsf{S} \cdot \mathsf{C} \cdot \mathsf{S}`, where :math:`\mathsf{S} = \sqrt{\mathrm{diag}(\mathsf{\Sigma})}`, and entry :math:`i, j` in the **correlation matrix** :math:`\mathsf{C}` is :math:`C_{ij} = \sigma_{ij}/\sigma_i\sigma_j`.
-- Because :math:`\Sigma` is symmetric and strictly positive definite, it can be uniquely defined in terms of its :ref:`Cholesky decomposition <https://en.wikipedia.org/wiki/Cholesky_decomposition>`, :math:`\mathsf{L}`, which satisfies :math:`\mathsf{\Sigma} = \mathsf{L}\cdot\mathsf{L}^\mathsf{T}`. In practice, you will almost always use the Cholesky representation of the Multivariate Normal distribution in Stan.
+- Because :math:`\mathsf{\Sigma}` is symmetric and strictly positive definite, it can be uniquely defined in terms of its :ref:`Cholesky decomposition <https://en.wikipedia.org/wiki/Cholesky_decomposition>`, :math:`\mathsf{L}`, which satisfies :math:`\mathsf{\Sigma} = \mathsf{L}\cdot\mathsf{L}^\mathsf{T}`. In practice, you will almost always use the Cholesky representation of the Multivariate Normal distribution in Stan.
 
 ----
 
