@@ -59,16 +59,17 @@ Variance: :math:`\displaystyle{\frac{\nu}{\nu - 2}}\,\sigma^2` for :math:`\nu > 
 Usage
 -----
 
-+-----------------+--------------------------------------------+
-| Package         | Syntax                                     |
-+=================+============================================+
-| **NumPy**       | ``mu + sigma * rg.standard_t(nu)``         |
-+-----------------+--------------------------------------------+
-| **SciPy**       | ``scipy.stats.t(nu, mu, sigma)``           |
-+-----------------+--------------------------------------------+
-| **Stan**        | ``student_t(nu, mu, sigma)``               |
-+-----------------+--------------------------------------------+
-
++----------------------+--------------------------------------------+
+| Package              | Syntax                                     |
++======================+============================================+
+| **NumPy**            | ``mu + sigma * rg.standard_t(nu)``         |
++----------------------+--------------------------------------------+
+| **SciPy**            | ``scipy.stats.t(nu, mu, sigma)``           |
++----------------------+--------------------------------------------+
+| **Stan**             | ``student_t(nu, mu, sigma)``               |
++----------------------+--------------------------------------------+
+| **Distributions.jl** | ``mu .+ sigma .* rand(TDist(nu), x)``      |
++----------------------+--------------------------------------------+
 
 ----
 
@@ -87,8 +88,7 @@ Related distributions
 Notes
 -----
 
-- Only the standard Student-t distribution (:math:`\mu = 0` and :math:`\sigma = 1`) is available in NumPy. You can still draw out of the Student-t distribution by performing a transformation on the samples out of the standard Student-t distribution, as shown in the usage, above.
-
+- Only the standard Student-t distribution (:math:`\mu = 0` and :math:`\sigma = 1`) is available in NumPy. You can still draw out of the Student-t distribution by performing a transformation on the samples out of the standard Student-t distribution, as shown in the usage, above. The same is true for Distributions.jl. Shown is an example where :math:`x` random numbers are drawn from the distribution and transformed using broadcasting.
 
 ----
 

@@ -120,3 +120,49 @@ to specify that ``y`` is Normally distributed with parameters ``mu`` and ``sigma
 Other suffixes are available, and the call signature can change depending on the suffix. For example, to compute the value of the logarithm of the PDF of the Normal distribution at point ``x``, we use ``normal_lpdf(x | mu, sigma)``.
 
 In the syntax listed in the vignettes, I show the syntax used in a sampling statement. That is a statement like ``normal(mu, sigma)``.
+
+Usage of Distributions.jl
+-------------
+
+In Julia, one way to create and sample from probability distributions is to use the ``Distributions.jl`` package. There is an extensive `documentation <https://docs.scipy.org/doc/scipy/reference/stats.html>`_ of the package, that shows many more use cases and probability distributions than we cover here. In short, one has to first define a ``Sampleable`` object, which then can be used to draw random numbers, compute PDFs and get various insights into the distribution. The Normal distribution is simply implemented as ``Normal()``.
+
+.. code:: julia
+	# Import package
+	using Distributions
+
+	# initiate normal distribution
+	N = Normal(0, 1)
+
+	# draw 100 random numbers
+	rand(N, 100)
+
+
+To compute the probability density function, one can simply call the function ``pdf()``.
+
+.. code:: julia
+	# Import package
+	using Distributions
+
+	# initiate normal distribution
+	N = Normal(0, 1)
+
+	# create array for x-values
+	x = -10:0.1:10
+
+	# compute PDF using broadcasting
+	pdf.(N, x)
+
+In the Distributions.jl package, half-distributions, such as the HalfNormal distribution, are not defined by themselves, but instead using the ``truncated()`` function. 
+
+.. code:: julia
+	# Import package
+	using Distributions
+
+	# initiate truncated normal distribution
+	N = truncated(Normal(0, 1); lower=0)
+
+	# create array for x-values
+	x = 0:0.1:10
+
+	# compute PDF using broadcasting
+	pdf.(N, x)
