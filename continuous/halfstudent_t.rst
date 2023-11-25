@@ -64,19 +64,19 @@ Variance: :math:`\sigma^2\left(\frac{\nu}{\nu - 2}-\frac{4\nu}{\pi(\nu-1)^2}\lef
 Usage
 -----
 
-+--------------------+--------------------------------------------------------------+
-| Package            | Syntax                                                       |
-+====================+==============================================================+
-| **NumPy**          | ``mu + sigma * np.abs(rg.standard_t(nu))``                   |
-+--------------------+--------------------------------------------------------------+
-| **SciPy sampling** | ``mu + np.abs(scipy.stats.t.rvs(nu, 0, sigma))``             |
-+--------------------+--------------------------------------------------------------+
-| **Stan sampling**  | ``real<lower=mu> y; y ~ student_t(nu, mu, sigma)``           |
-+--------------------+--------------------------------------------------------------+
-| **Stan rng**       | ``real<lower=mu> y; y = mu + fabs(student_t(nu, 0, sigma))`` |
-+--------------------+--------------------------------------------------------------+
-
-
++----------------------+--------------------------------------------------------------+
+| Package              | Syntax                                                       |
++======================+==============================================================+
+| **NumPy**            | ``mu + sigma * np.abs(rg.standard_t(nu))``                   |
++----------------------+--------------------------------------------------------------+
+| **SciPy sampling**   | ``mu + np.abs(scipy.stats.t.rvs(nu, 0, sigma))``             |
++----------------------+--------------------------------------------------------------+
+| **Stan sampling**    | ``real<lower=mu> y; y ~ student_t(nu, mu, sigma)``           |
++----------------------+--------------------------------------------------------------+
+| **Stan rng**         | ``real<lower=mu> y; y = mu + fabs(student_t(nu, 0, sigma))`` |
++----------------------+--------------------------------------------------------------+
+| **Distributions.jl** | ``mu .+ sigma .* rand(truncated(TDist(nu); lower=mu), x)``   |
++----------------------+--------------------------------------------------------------+
 ----
 
 
@@ -96,10 +96,9 @@ Notes
 -----
 
 - In Stan, a Half-Student-t is defined by putting a lower bound of :math:`\mu` on the variable and then using a Student-t distribution with location parameter :math:`\mu`.
-- Only the standard Student-t distribution (:math:`\mu = 0` and :math:`\sigma = 1`) is available in NumPy. You can still draw out of the Half-Student-t distribution by performing a transformation on the samples out of the standard Student-t distribution, as shown in the usage, above.
+- Only the standard Student-t distribution (:math:`\mu = 0` and :math:`\sigma = 1`) is available in NumPy. You can still draw out of the Student-t distribution by performing a transformation on the samples out of the standard Student-t distribution, as shown in the usage, above. The same is true for Distributions.jl. Shown is an example where :math:`x` random numbers are drawn from the distribution and transformed using broadcasting.
 - The Half-Student-t distribution is not available in SciPy. To compute the PDF for :math:`y \ge \mu`, use ``2 * scipy.stats.t.pdf(y, nu, mu, sigma)``. To compute the CDF for :math:`y \ge \mu`, use ``2 * scipy.stats.t.cdf(y, nu, mu, sigma) - 1``.
 - The Half-Student-t distribution with :math:`\mu = 0` is a useful prior for nonnegative parameters. The parameter :math:`\nu` of the Half-Student-t can be tuned to allow for a heavy tail (:math:`\nu` close to 1) or a light tail (large :math:`\nu`).
-
 
 ----
 
