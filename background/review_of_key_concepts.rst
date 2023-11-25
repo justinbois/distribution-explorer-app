@@ -186,8 +186,8 @@ For discrete distributions, I plot the CDFs as "staircases," as shown below.
 	y_c[::2] = y
 	y_c[1::2] = y
 
-	p = bokeh.plotting.figure(plot_height=200,
-	                          plot_width=300,
+	p = bokeh.plotting.figure(frame_height=200,
+	                          frame_width=300,
 	                          x_axis_label='n',
 	                          y_axis_label='F(n; 20, 0.34)',
 	                          title='Binomial CDF', tools="save")
@@ -211,8 +211,8 @@ The CDF appears to be multivalued at the vertical lines of the staircase. It is 
 	x = np.arange(0, 21)
 	y = scipy.stats.binom.cdf(x, 20, 0.34)
 
-	p = bokeh.plotting.figure(plot_height=250,
-	                          plot_width=350,
+	p = bokeh.plotting.figure(frame_height=250,
+	                          frame_width=350,
 	                          x_axis_label='n',
 	                          y_axis_label='F(n; 20, 0.34)',
 	                          title='Binomial CDF', tools="save")
