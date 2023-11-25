@@ -41,7 +41,6 @@ The Exponential distribution is supported on the set of nonnegative real numbers
 
 ----
 
-
 Probability density function
 ----------------------------
 
@@ -50,6 +49,18 @@ Probability density function
 	\begin{align}
 	f(y;\beta) = \beta \,\mathrm{e}^{-\beta y}.
 	\end{align}
+
+
+----
+
+Cumulative distribution function
+--------------------------------
+
+.. math::
+
+    \begin{align}
+    F(y; \beta) = 1 - \mathrm{e}^{-\beta y}.
+    \end{align}
 
 
 ----
