@@ -41,7 +41,7 @@ Probability density function
 .. math::
 
 	\begin{align}
-	f(y;\mu, \sigma) = \left\{\begin{array}{cll}
+	f(y;\nu, \mu, \sigma) = \left\{\begin{array}{cll}
     \frac{\Gamma\left(\frac{\nu+1}{2}\right)}{\Gamma\left(\frac{\nu}{2}\right)\sqrt{\pi \nu \sigma^2}}\left(1 + \frac{(y-\mu)^2}{\nu \sigma^2}\right)^{-\frac{\nu + 1}{2}} &  & y \ge \mu \\[1em]
     0 & & \text{otherwise}.
     \end{array}\right.

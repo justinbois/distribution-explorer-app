@@ -48,8 +48,20 @@ Probability density function
 .. math::
 
 	\begin{align}
-	f(y;\alpha, \beta) = \left\{\begin{array}{ccl}\frac{1}{\beta-\alpha}&&\alpha\le y\le\beta\\[0.5em] 0 && \text{otherwise.}\end{array}\right.
+	f(y;\alpha, \beta) = \left\{\begin{array}{ccl}\displaystyle{\frac{1}{\beta-\alpha}}&&\alpha\le y\le\beta\\[0.5em] 0 && \text{otherwise.}\end{array}\right.
 	\end{align}
+
+
+----
+
+Cumulative distribution function
+--------------------------------
+
+.. math::
+
+    \begin{align}
+    F(y; \alpha, \beta) = \left\{\begin{array}{ccl} 0 && y < a \\[0.5em]\displaystyle{\frac{y-\alpha}{\beta-\alpha}}&&\alpha\le y\le\beta\\[0.5em] 1 && y > \beta\end{array}\right.
+    \end{align}
 
 
 ----
@@ -58,9 +70,9 @@ Probability density function
 Moments
 -------
 
-Mean: :math:`\displaystyle{\frac{a+b}{2}}`
+Mean: :math:`\displaystyle{\frac{\alpha + \beta}{2}}`
 
-Variance: :math:`\displaystyle{\frac{(b-a)^2}{12}}`
+Variance: :math:`\displaystyle{\frac{(\beta - \alpha)^2}{12}}`
 
 
 ----

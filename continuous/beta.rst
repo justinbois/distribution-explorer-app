@@ -73,7 +73,7 @@ where
     I_\theta(\alpha, \beta) = \frac{1}{B(\alpha, \beta)}\,\int_0^\theta \mathrm{d}x\,x^{\alpha-1}(1-x)^{\beta-1}
     \end{align}
 
-is the `regularized incomplete Beta function <https://en.wikipedia.org/wiki/Beta_function#Incomplete_beta_function>`_.
+is the `regularized incomplete beta function <https://en.wikipedia.org/wiki/Regularized_incomplete_beta_function>`_.
 
 
 ----

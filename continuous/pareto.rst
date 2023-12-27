@@ -18,7 +18,7 @@ There is no real story to the Pareto distribution, except that it is a distribut
 Example
 -------
 
-The `Gutenberg-Richter Law <https://en.wikipedia.org/wiki/Gutenberg–Richter_law>`_ says that the magnitudes of earthquakes in a given region are Pareto distributed. Other random variables that are often described by power laws include size of human settlement (many small towns, a few huge cities), income distribution (many poor, few obscenely rich).
+The `Gutenberg-Richter Law <https://en.wikipedia.org/wiki/Gutenberg–Richter_law>`_ says that the magnitudes of earthquakes in a given region are Pareto distributed. Other random variables that are often described by power laws include size of human settlement (many small towns, a few huge cities), and income distribution (many poor, few extremely rich).
 
 
 ----
@@ -113,6 +113,7 @@ Thus, the power law is clear. A plot of the CCDF on a log-log plot yields a line
 
     p = bokeh.plotting.figure(frame_height=150, frame_width=200, x_axis_type='log', y_axis_type='log', x_axis_label='y', y_axis_label='CCDF', tools="save", x_range=[1e-1, 1e3], background_fill_alpha=0, border_fill_alpha=0)
     p.line(x, y, line_width=2)
+
     bokeh.io.show(p)
 
 

@@ -109,7 +109,7 @@ PDF and CDF plots
 Links
 -----
 
-- `Wikipedia <https://en.wikipedia.org/wiki/Normal_distribution>`_
+- `Wikipedia <https://en.wikipedia.org/wiki/Student%27s_t-distribution>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.standard_t.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html>`_
 - `Stan <https://mc-stan.org/docs/2_21/functions-reference/student-t-distribution.html>`_

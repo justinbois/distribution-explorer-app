@@ -81,7 +81,7 @@ Usage
 +-----------------------+---------------------------------------------+
 | Package               | Syntax                                      |
 +=======================+=============================================+
-| **NumPy**             | ``rg.exponential(1/beta)``                  |
+| **NumPy**             | ``rng.exponential(1/beta)``                 |
 +-----------------------+---------------------------------------------+
 | **SciPy**             | ``scipy.stats.expon(loc=0, scale=1/beta)``  |
 +-----------------------+---------------------------------------------+
@@ -114,9 +114,6 @@ Notes
     f(y;\tau) = \frac{1}{\tau}\,\mathrm{e}^{-y/\tau}.
     \end{align}
 
-- The implementation in the ``scipy.stats`` module also has a location parameter, which shifts the distribution left and right. For our purposes, you can ignore that parameter, but be aware that ``scipy.stats`` requires it. Furthermore, the ``scipy.stats`` Exponential distribution is parametrized in terms of the interarrival time :math:`\tau` and not the arrival rate :math:`\beta`.
-- NumPy's ``rg.exponential()`` function does not need nor accept a location parameter. It is also parametrized in terms of :math:`\tau`.
-
 ----
 
 
@@ -139,4 +136,4 @@ Links
 - `Wikipedia <https://en.wikipedia.org/wiki/Exponential_distribution>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.exponential.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.expon.html>`_
-- `Stan <https://mc-stan.org/docs/2_21/functions-reference/exponential-distribution.html>`_
+- `Stan <https://mc-stan.org/docs/functions-reference/exponential-distribution.html>`_

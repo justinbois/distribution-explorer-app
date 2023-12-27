@@ -27,7 +27,7 @@ Distribution of plasmids between daughter cells in cell division. Each of the :m
 Parameters
 ----------
 
-There are two parameters: the probability :math:`\theta` of success for each Bernoulli trial, and the number of trials, :math:`N`.
+There are two parameters: the number of Bernoulli trials, :math:`N`, and the probability :math:`\theta` of success for each trial.
 
 
 ----
@@ -58,6 +58,29 @@ Probability mass function
 
 ----
 
+
+Cumulative distribution function
+--------------------------------
+
+The CDF evaluated at integers :math:`n` is
+
+.. math::
+
+	\begin{align}
+	F(n;N,\theta) = I_{1-\theta}(N - n, n + 1),
+	\end{align}
+
+where :math:`I_x(a, b)` is the `regularized incomplete beta function <https://en.wikipedia.org/wiki/Regularized_incomplete_beta_function>`_, given by
+
+.. math::
+
+	\begin{align}
+    I_x(\alpha, \beta) = \frac{1}{B(a, b)}\,\int_0^x \mathrm{d}y\,y^{a-1}(1-y)^{b-1}.
+    \end{align}
+
+----
+
+
 Moments
 -------
 
@@ -75,14 +98,15 @@ Usage
 +----------------------+----------------------------------+
 | Package              | Syntax                           |
 +======================+==================================+
-| **NumPy**            | ``rg.binomial(N, theta)``        |
+| **NumPy**            | ``rng.binomial(N, theta)``       |
 +----------------------+----------------------------------+
 | **SciPy**            | ``scipy.stats.binom(N, theta)``  |
 +----------------------+----------------------------------+
-| **Stan**             | ``binomial(N, theta)``           |
-+----------------------+----------------------------------+
 | **Distributions.jl** | ``Binomial(N, theta)``           |
 +----------------------+----------------------------------+
+| **Stan**             | ``binomial(N, theta)``           |
++----------------------+----------------------------------+
+
 ----
 
 Related distributions
@@ -115,4 +139,5 @@ Links
 - `Wikipedia <https://en.wikipedia.org/wiki/Binomial_distribution>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.binomial.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html>`_
-- `Stan <https://mc-stan.org/docs/2_21/functions-reference/binomial-distribution.html>`_
+- `Distributions.jl <https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.Binomial>`_
+- `Stan <https://mc-stan.org/docs/functions-reference/binomial-distribution.html>`_

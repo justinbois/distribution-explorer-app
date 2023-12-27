@@ -58,6 +58,23 @@ Probability mass function
 
 ----
 
+
+Cumulative distribution function
+--------------------------------
+
+.. math::
+	\begin{align}
+	f(y;\theta) = \left\{ \begin{array}{ccc}
+	0 & & y < 0 \\[0.5em]
+	1 - \theta & & 0 \le y < 1 \\[0.5em]
+	1 & & y \ge 1.
+	\end{array}
+	\right.
+	\end{align}
+
+
+----
+
 Moments
 -------
 
@@ -75,13 +92,13 @@ Usage
 +----------------------+--------------------------------------------------+
 | Package              | Syntax                                           |
 +======================+==================================================+
-| **NumPy**            | ``rg.choice([0, 1], p=[1-theta, theta])``        |
+| **NumPy**            | ``rng.choice([0, 1], p=[1 - theta, theta])``     |
 +----------------------+--------------------------------------------------+
 | **SciPy**            | ``scipy.stats.bernoulli(theta)``                 |
 +----------------------+--------------------------------------------------+
-| **Stan**             | ``bernoulli(theta)``                             |
-+----------------------+--------------------------------------------------+
 | **Distributions.jl** | ``Bernoulli(theta)``                             |
++----------------------+--------------------------------------------------+
+| **Stan**             | ``bernoulli(theta)``                             |
 +----------------------+--------------------------------------------------+
 
 
@@ -116,5 +133,6 @@ Links
 - `Wikipedia <https://en.wikipedia.org/wiki/Bernoulli_distribution>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.choice.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bernoulli.html>`_
-- `Stan <https://mc-stan.org/docs/2_21/functions-reference/bernoulli-distribution.html>`_
+- `Distributions.jl <https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.Bernoulli>`_
+- `Stan <https://mc-stan.org/docs/functions-reference/bernoulli-distribution.html>`_
 

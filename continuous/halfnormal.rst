@@ -41,11 +41,10 @@ Probability density function
 .. math::
 
 	\begin{align}
-	f(y;\mu, \sigma) = \left\{\begin{array}{cll}
-    \sqrt{\frac{2}{\pi\sigma^2}}\,\mathrm{e}^{-(y-\mu)^2/2\sigma^2} &  & y \ge \mu \\[1em]
-    0 & & \text{otherwise}.
-    \end{array}\right.
+	f(y;\mu, \sigma) = \sqrt{\frac{2}{\pi\sigma^2}}\,\mathrm{e}^{-(y-\mu)^2/2\sigma^2}.
 	\end{align}
+
+    Note that the distribution is only supported for :math:`y \ge \mu`.
 
 ----
 
