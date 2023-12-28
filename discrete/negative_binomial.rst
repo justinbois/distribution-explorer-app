@@ -71,6 +71,28 @@ See the notes below for other parametrizations.
 
 ----
 
+Cumulative distribution function
+--------------------------------
+
+The CDF evaluated at nonnegative integers :math:`n` is
+
+.. math::
+
+    \begin{align}
+    F(n;N,\theta) = I_{\beta/(1+\beta)}(\alpha, n + 1),
+    \end{align}
+
+where :math:`I_x(a, b)` is the `regularized incomplete beta function <https://en.wikipedia.org/wiki/Regularized_incomplete_beta_function>`_, given by
+
+.. math::
+
+    \begin{align}
+    I_x(a, b) = \frac{1}{B(a, b)}\,\int_0^x \mathrm{d}y\,y^{a-1}(1-y)^{b-1}.
+    \end{align}
+
+----
+
+
 Moments
 -------
 
@@ -96,13 +118,13 @@ Usage
 +---------------------------------------------------+-------------------------------------------------------+
 | **SciPy with (µ, φ) parametrization**             | ``scipy.stats.nbinom(phi, phi/(mu+phi))``             |
 +---------------------------------------------------+-------------------------------------------------------+
+| **Distributions.jl**                              | ``NegativeBinomial(alpha, beta/(1+beta))``            |
++---------------------------------------------------+-------------------------------------------------------+
+| **Distributions.jl with (µ, φ) parametrization**  | ``NegativeBinomial(phi, phi/(mu+phi))``               |
++---------------------------------------------------+-------------------------------------------------------+
 | **Stan**                                          | ``neg_binomial(alpha, beta)``                         |
 +---------------------------------------------------+-------------------------------------------------------+
 | **Stan with (µ, φ) parametrization**              | ``neg_binomial_2(mu, phi)``                           |
-+---------------------------------------------------+-------------------------------------------------------+
-| **Distributions.jl                                | ``NegativeBinomial(alpha, beta/(1+beta))``            |
-+---------------------------------------------------+-------------------------------------------------------+
-| **Distributions.jl with (µ, φ) parametrization**  | ``NegativeBinomial(phi, phi/(mu+phi))``               |
 +---------------------------------------------------+-------------------------------------------------------+
 
 ----
@@ -192,5 +214,6 @@ Links
 - `Wikipedia <https://en.wikipedia.org/wiki/Negative_binomial_distribution>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.negative_binomial.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.nbinom.html>`_
-- `Stan α-β formulation <https://mc-stan.org/docs/2_21/functions-reference/negative-binomial-distribution.html>`_
-- `Stan µ-φ formulation formulation <https://mc-stan.org/docs/2_21/functions-reference/nbalt.html>`_
+- `Distributions.jl <https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.NegativeBinomial>`_
+- `Stan α-β formulation <https://mc-stan.org/docs/functions-reference/negative-binomial-distribution.html>`_
+- `Stan µ-φ formulation formulation <https://mc-stan.org/docs/functions-reference/nbalt.html>`_

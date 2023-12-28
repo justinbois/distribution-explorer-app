@@ -75,7 +75,7 @@ Usage
 +----------------------+-----------------------------------------------------------+
 | **Stan rng**         | ``real<lower=mu> y; y = mu + fabs(cauchy_rng(0, sigma))`` |
 +----------------------+-----------------------------------------------------------+
-| **Distributions.jl** | ``truncated(Cauchy(mu, sigma); lower=mu) ``               |
+| **Distributions.jl** | ``truncated(Cauchy(mu, sigma); lower=mu)``                |
 +----------------------+-----------------------------------------------------------+
 
 ----
@@ -84,8 +84,8 @@ Usage
 Related distributions
 ---------------------
 
-- The :ref:`cauchy`, distribution is obviously closely related. The Half-Cauchy is simply a truncated Cauchy distribution where only values at the peak or to its right have nonzero probability density.
-- The Half-Cauchy distribution is the :math:`\nu=1` special case of the :ref:`half_student_t`.
+- The :ref:`cauchy` distribution is obviously closely related. The Half-Cauchy is simply a truncated Cauchy distribution where only values at the peak or to its right have nonzero probability density.
+- The Half-Cauchy distribution is the :math:`\nu = 1` special case of the :ref:`half_student_t`.
 
 
 ----

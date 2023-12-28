@@ -62,7 +62,7 @@ Probability mass function
 Cumulative distribution function
 --------------------------------
 
-The CDF evaluated at integers :math:`n` is
+The CDF evaluated at integers :math:`n` with :math:`0 \le n \le N` is
 
 .. math::
 
@@ -75,7 +75,7 @@ where :math:`I_x(a, b)` is the `regularized incomplete beta function <https://en
 .. math::
 
 	\begin{align}
-    I_x(\alpha, \beta) = \frac{1}{B(a, b)}\,\int_0^x \mathrm{d}y\,y^{a-1}(1-y)^{b-1}.
+    I_x(a, b) = \frac{1}{B(a, b)}\,\int_0^x \mathrm{d}y\,y^{a-1}(1-y)^{b-1}.
     \end{align}
 
 ----

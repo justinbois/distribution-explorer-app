@@ -72,13 +72,13 @@ Usage
 +----------------------+-----------------------------------------------------------------------+
 | Package              | Syntax                                                                |
 +======================+=======================================================================+
-| **NumPy**            | ``rg.integers(low, high+1)``                                          |
+| **NumPy**            | ``rng.integers(low, high + 1)``                                       |
 +----------------------+-----------------------------------------------------------------------+
-| **SciPy**            | ``scipy.stats.randint(low, high+1)``                                  |
-+----------------------+-----------------------------------------------------------------------+
-| **Stan**             | ``categorical(theta)``, ``theta`` array with all equal values         |
+| **SciPy**            | ``scipy.stats.randint(low, high + 1)``                                |
 +----------------------+-----------------------------------------------------------------------+
 | **Distributions.jl** | ``DiscreteUniform(low, high)``                                        |
++----------------------+-----------------------------------------------------------------------+
+| **Stan**             | ``categorical(theta)``, ``theta`` array with all equal values         |
 +----------------------+-----------------------------------------------------------------------+
 
 
@@ -97,7 +97,7 @@ Notes
 -----
 
 - This distribution is not included in Stan. Instead, use a :ref:`categorical` with equal probailities.
-- In SciPy, this distribution is known as ``scipy.stats.randint``. The high parameter is not inclusive; i.e., the set of allowed values includes the low parameter, but not the high. The same is true for ``rg.integers()``, unless you use the ``endpoint=True`` keyword argument, in which case the high parameter is inclusive.
+- In SciPy, this distribution is known as ``scipy.stats.randint``. The high parameter is not inclusive; i.e., the set of allowed values includes the low parameter, but not the high. The same is true for ``rng.integers()``, unless you use the ``endpoint=True`` keyword argument, in which case the high parameter is inclusive.
 
 ----
 
@@ -121,4 +121,5 @@ Links
 - `Wikipedia <https://en.wikipedia.org/wiki/Discrete_uniform_distribution>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.integers.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.rv_discrete.html>`_
-- `Stan <https://mc-stan.org/docs/2_21/functions-reference/categorical-distribution.html>`_
+- `Distributions.jl <https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.DiscreteUniform>`_
+- `Stan <https://mc-stan.org/docs/functions-reference/categorical-distribution.html>`_
