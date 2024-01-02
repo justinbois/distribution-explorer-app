@@ -55,6 +55,21 @@ Probability mass function
 ----
 
 
+Cumulative distribution function
+--------------------------------
+
+The CDF evaluated at integer :math:`y` is
+
+.. math::
+
+    \begin{align}
+    F(y ; y_\mathrm{low}, y_\mathrm{high}) = \frac{y - y_\mathrm{low} + 1}{y_\mathrm{high} - y_\mathrm{low} + 1}
+    \end{align}
+
+
+----
+
+
 Moments
 -------
 

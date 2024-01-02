@@ -65,15 +65,7 @@ The CDF evaluated at nonnegative integer :math:`n` is
     F(n;\lambda) = \frac{\Gamma(n + 1, \lambda)}{n!},
     \end{align}
 
-where
-
-.. math::
-
-    \begin{align}
-    \Gamma(s, x) = \int_x^\infty\mathrm{d}t\,t^{s-1}\mathrm{e}^{-t}
-    \end{align}
-
-is the `upper incomplete gamma function <https://en.wikipedia.org/wiki/Incomplete_gamma_function>`_.
+where :math:`\Gamma(n + 1, \lambda)` is the :ref:`upper incomplete gamma function <Upper incomplete gamma function>`.
 
 
 ----

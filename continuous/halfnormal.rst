@@ -44,7 +44,25 @@ Probability density function
 	f(y;\mu, \sigma) = \sqrt{\frac{2}{\pi\sigma^2}}\,\mathrm{e}^{-(y-\mu)^2/2\sigma^2}.
 	\end{align}
 
-    Note that the distribution is only supported for :math:`y \ge \mu`.
+Note that the distribution is only supported for :math:`y \ge \mu`.
+
+----
+
+
+Cumulative distribution function
+--------------------------------
+
+.. math::
+
+    \begin{align}
+    F(y;\mu, \sigma) = \left\{\begin{array}{cll}
+    \displaystyle{\text{erf}\left(\frac{y - \mu}{\sigma\sqrt{2}}\right)} & & y \ge \mu,\\[0.5em]
+    0 & & \text{otherwise},
+    \end{array}
+    \right.
+    \end{align}
+
+where :math:`\text{erf}(x)` denotes :ref:`the error function <Error function>`.
 
 ----
 
@@ -66,15 +84,15 @@ Usage
 +----------------------+-----------------------------------------------------------+
 | Package              | Syntax                                                    |
 +======================+===========================================================+
-| **NumPy**            | ``mu + np.abs(rg.normal(0, sigma))``                      |
+| **NumPy**            | ``mu + np.abs(rng.normal(0, sigma))``                     |
 +----------------------+-----------------------------------------------------------+
 | **SciPy**            | ``scipy.stats.halfnorm(mu, sigma)``                       |
++----------------------+-----------------------------------------------------------+
+| **Distributions.jl** | ``truncated(Normal(mu, sigma); lower=mu)``                |
 +----------------------+-----------------------------------------------------------+
 | **Stan sampling**    | ``real<lower=mu> y; y ~ normal(mu, sigma)``               |
 +----------------------+-----------------------------------------------------------+
 | **Stan rng**         | ``real<lower=mu> y; y = mu + fabs(normal_rng(0, sigma))`` |
-+----------------------+-----------------------------------------------------------+
-| **Distributions.jl** | ``truncated(Normal(mu, sigma); lower=mu)``                |
 +----------------------+-----------------------------------------------------------+
 
 
@@ -120,4 +138,5 @@ Links
 - `Wikipedia <https://en.wikipedia.org/wiki/Half-normal_distribution>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.normal.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.halfnorm.html#scipy.stats.halfnorm>`_
-- `Stan <https://mc-stan.org/docs/2_21/functions-reference/normal-distribution.html>`_
+- `Distribution.jl <https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.Normal>`_
+- `Stan <https://mc-stan.org/docs/functions-reference/normal-distribution.html>`_

@@ -25,7 +25,7 @@ import recommonmark.transform
 # -- Project information -----------------------------------------------------
 
 project = 'Probability Distribution Explorer'
-copyright = '2021, Justin Bois'
+copyright = '2019–2024, Justin Bois'
 author = 'Justin Bois'
 
 # The full version, including alpha/beta/rc tags
@@ -72,7 +72,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.

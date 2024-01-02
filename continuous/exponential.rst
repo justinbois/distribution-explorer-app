@@ -27,7 +27,7 @@ The time between conformational switches in a protein is Exponentially distribut
 Parameters
 ----------
 
-The single parameter is the average arrival rate, :math:`\beta`.
+The single parameter is the positive arrival rate, :math:`\beta`. It is an inverse scale parameter.
 
 ----
 
@@ -85,9 +85,9 @@ Usage
 +-----------------------+---------------------------------------------+
 | **SciPy**             | ``scipy.stats.expon(loc=0, scale=1/beta)``  |
 +-----------------------+---------------------------------------------+
-| **Stan**              | ``exponential(beta)``                       |
-+-----------------------+---------------------------------------------+
 | **Distributions.jl**  | ``Exponential(1/beta)``                     |
++-----------------------+---------------------------------------------+
+| **Stan**              | ``exponential(beta)``                       |
 +-----------------------+---------------------------------------------+
 
 ----
@@ -136,4 +136,5 @@ Links
 - `Wikipedia <https://en.wikipedia.org/wiki/Exponential_distribution>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.exponential.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.expon.html>`_
+- `Distributions.jl <https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.Exponential>`_
 - `Stan <https://mc-stan.org/docs/functions-reference/exponential-distribution.html>`_

@@ -83,13 +83,13 @@ Usage
 +----------------------+-----------------------------------------------+
 | Package              | Syntax                                        |
 +======================+===============================================+
-| **NumPy**            | ``np.uniform(alpha, beta)``                   |
+| **NumPy**            | ``rng.uniform(alpha, beta)``                  |
 +----------------------+-----------------------------------------------+
 | **SciPy**            | ``scipy.stats.uniform(alpha, beta - alpha)``  |
 +----------------------+-----------------------------------------------+
-| **Stan**             | ``uniform(alpha, beta)``                      |
-+----------------------+-----------------------------------------------+
 | **Distributions.jl** | ``Uniform(alpha, beta)``                      |
++----------------------+-----------------------------------------------+
+| **Stan**             | ``uniform(alpha, beta)``                      |
 +----------------------+-----------------------------------------------+
 
 ----
@@ -122,4 +122,5 @@ Links
 - `Wikipedia <https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.uniform.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.uniform.html#scipy.stats.uniform>`_
-- `Stan <https://mc-stan.org/docs/2_21/functions-reference/uniform-distribution.html>`_
+- `Distributions.jl <https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.Uniform>`_
+- `Stan <https://mc-stan.org/docs/functions-reference/uniform-distribution.html>`_

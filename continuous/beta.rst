@@ -18,7 +18,7 @@ Say you wait for two multistep Poisson processes to arive. The individual steps 
 Parameters
 ----------
 
-There are two parameters, both strictly positive: :math:`\alpha` and :math:`\beta`, defined in the above story.
+There are two shape parameters, both strictly positive: :math:`\alpha` and :math:`\beta`, defined in the above story.
 
 ----
 
@@ -42,15 +42,7 @@ Probability density function
 	f(\theta; \alpha, \beta) = \frac{\theta^{\alpha-1}(1-\theta)^{\beta-1}}{B(\alpha, \beta)},
 	\end{align}
 
-where
-
-.. math::
-
-    \begin{align}
-    B(\alpha, \beta) = \frac{\Gamma(\alpha)\,\Gamma(\beta)}{\Gamma(\alpha + \beta)}
-    \end{align}
-
-is the `Beta function <https://en.wikipedia.org/wiki/Beta_function>`_.
+where :math:`B(\alpha, \beta)` is the :ref:`beta function <Beta function>`.
 
 
 ----
@@ -62,18 +54,10 @@ Cumulative distribution function
 .. math::
 
     \begin{align}
-    F(\theta; \alpha, \beta) = I_\theta(\alpha, \beta),
+    F(\theta; \alpha, \beta) = I_\theta(\alpha, \beta) = \frac{1}{B(\alpha, \beta)}\,\int_0^\theta \mathrm{d}x\,x^{\alpha-1}(1-x)^{\beta-1},
     \end{align}
 
-where
-
-.. math::
-
-    \begin{align}
-    I_\theta(\alpha, \beta) = \frac{1}{B(\alpha, \beta)}\,\int_0^\theta \mathrm{d}x\,x^{\alpha-1}(1-x)^{\beta-1}
-    \end{align}
-
-is the `regularized incomplete beta function <https://en.wikipedia.org/wiki/Regularized_incomplete_beta_function>`_.
+where :math:`I_\theta(\alpha, \beta)` is the :ref:`regularized incomplete beta function <Regularized incomplete beta function>`.
 
 
 ----
@@ -96,14 +80,15 @@ Usage
 +----------------------+----------------------------------------------------+
 | Package              | Syntax                                             |
 +======================+====================================================+
-| **NumPy**            | ``rg.beta(alpha, beta)``                           |
+| **NumPy**            | ``rng.beta(alpha, beta)``                          |
 +----------------------+----------------------------------------------------+
 | **SciPy**            | ``scipy.stats.beta(alpha, beta)``                  |
 +----------------------+----------------------------------------------------+
-| **Stan**             | ``beta(alpha, beta)``                              |
-+----------------------+----------------------------------------------------+
 | **Distributions.jl** | ``Beta(alpha, beta)``                              |
 +----------------------+----------------------------------------------------+
+| **Stan**             | ``beta(alpha, beta)``                              |
++----------------------+----------------------------------------------------+
+
 
 
 ----
@@ -169,4 +154,5 @@ Links
 - `Wikipedia <https://en.wikipedia.org/wiki/Beta_distribution>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.beta.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.beta.html>`_
-- `Stan <https://mc-stan.org/docs/2_21/functions-reference/beta-distribution.html>`_
+- `Distributions.jl <https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.Beta>`_
+- `Stan <https://mc-stan.org/docs/functions-reference/beta-distribution.html>`_

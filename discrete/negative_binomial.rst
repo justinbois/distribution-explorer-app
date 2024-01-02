@@ -9,7 +9,7 @@ Negative Binomial distribution
 Story
 -----
 
-We perform a series of Bernoulli trials with probability :math:`\beta/(1+\beta)` of success. The number of failures, :math:`y`, before we get :math:`\alpha` successes is Negative Binomially distributed. 
+We perform a series of Bernoulli trials, each with probability :math:`\beta/(1+\beta)` of success. The number of failures, :math:`y`, before we get :math:`\alpha` successes is Negative Binomially distributed. 
 
 An equivalent story is this: Draw a parameter :math:`\lambda` out of a :ref:`gamma` with parameters :math:`\alpha` and :math:`\beta`. Then draw a number :math:`y` out of a :ref:`poisson` with parameter :math:`\lambda`. Then :math:`y` is Negative Binomially distributed with parameters :math:`\alpha` and :math:`\beta`. For this reason, the Negative Binomial distribution is sometimes called the Gamma-Poisson distribution.
 
@@ -28,7 +28,7 @@ Bursty gene expression can give mRNA count distributions that are Negative Binom
 Parameters
 ----------
 
-There are two parameters: :math:`\alpha`, the desired number of successes, and :math:`\beta`, which is the mean of the :math:`\alpha` identical Gamma distributions that give the Negative Binomial. The probability of success of each Bernoulli trial is given by :math:`\beta/(1+\beta)`.
+There are two parameters: :math:`\alpha`, the desired number of successes, and :math:`\beta`, which is the scale parameter of the Gamma distribution that gives rise to the Negative Binomial. The probability of success of each Bernoulli trial is given by :math:`\beta/(1+\beta)`.
 
 
 
@@ -110,9 +110,9 @@ Usage
 +---------------------------------------------------+-------------------------------------------------------+
 | Package                                           | Syntax                                                |
 +===================================================+=======================================================+
-| **NumPy**                                         | ``rg.negative_binomial(alpha, beta/(1+beta))``        |
+| **NumPy**                                         | ``rng.negative_binomial(alpha, beta/(1+beta))``       |
 +---------------------------------------------------+-------------------------------------------------------+
-| **NumPy with (µ, φ) parametrization**             | ``rg.negative_binomial(phi, phi/(mu+phi))``           |
+| **NumPy with (µ, φ) parametrization**             | ``rng.negative_binomial(phi, phi/(mu+phi))``          |
 +---------------------------------------------------+-------------------------------------------------------+
 | **SciPy**                                         | ``scipy.stats.nbinom(alpha, beta/(1+beta))``          |
 +---------------------------------------------------+-------------------------------------------------------+
@@ -134,7 +134,7 @@ Related distributions
 
 - The :ref:`geometric` is a special case of the Negative Binomial distribution in which :math:`\alpha=1` and :math:`\theta = \beta/(1+\beta)`.
 - The continuous analog of the Negative Binomial distribution is the :ref:`gamma`. 
-- In a certain limit, which is easier considered using the :math:`(\mu,\phi)` parametrization below, the Negative Binomial distribution becomes a :ref:`poisson`. See the note below for this limit.
+- In the limit where :math:`\alpha` is very large, but the ratio :math:`\beta/\alpha` is fixed, the Negative Binomial distribution becomes a :ref:`poisson` with parameter :math:`\alpha/\beta`. See the note below for this limit.
 
 
 ----
@@ -174,13 +174,14 @@ Mean: :math:`\displaystyle{n\,\frac{1-p}{p}}`
 
 Variance: :math:`\displaystyle{n\,\frac{1-p}{p^2}}`.
 
-Note that Wikipedia uses this parametrization except defining :math:`p` to be the probability of *failure* of a Bernoulli trial, in accordance with the story above.
 
 ----
 
 
 PMF and CDF plots
 -----------------
+
+**Note**: Quantile setting of both parameters for a Negative Binomial distribution is a challenging problem for a few reasons. First, there is no guarantee that a parameter set exists to give two specified value-quantile pairs can be obtained. Secondly, in other cases, there is a degeneracy of parameters that give the same quantiles. As an example, if we wished for 4 to be the 2.5th percentile and 17 to be the 97.5th percentile, we could achieve this with :math:`\alpha = 100` and :math:`\beta = 10`, with :math:`\alpha = 350` and :math:`\beta = 35`, with :math:`\alpha = 10^9` and :math:`\beta = 10^8`, and countless other combinations. (This is because the large :math:`\alpha` limit if Poisson.) So, instead of manipulating two parameters to hit two quantiles, we can lock one parameter and set the other parameter to give a single desired percentile. In the :math:`\alpha`-:math:`\beta` formulation, we fix :math:`\alpha`, and in the :math:`\mu`-:\math:`\phi` formulation, we fix :math:`\mu`.
 
 In the α-β formulation:
 

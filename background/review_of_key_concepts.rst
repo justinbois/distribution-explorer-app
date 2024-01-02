@@ -268,10 +268,10 @@ If a probability mass or density function depends on parameters, say :math:`N` a
 Distributions may be parametrized in different ways. For example, we may parametrize a Normal distribution in terms of what is commonly called the standard deviation :math:`\sigma`, but we can also parametrize it by the precision :math:`\tau \equiv 1/\sigma`. The parametrizations we use are those used in the `Stan <http://mc-stan.org/>`_ probabilistic programming language.
 
 
-Location and scale parameters
------------------------------
+Location, scale, and shape parameters
+-------------------------------------
 
-Some parameters of distributions have special properties. A **location** parameter shifts the PMF/PDF and CDF along the x-axis. A **scale** parameter serves to rescale the x-axis. As an example, the Normal distribution has PDF
+Some parameters of distributions have special properties. A **location** parameter shifts the PMF/PDF and CDF along the x-axis. A **scale** parameter serves to rescale the x-axis. Scale parameters are necessarily positive. As an example, the Normal distribution has PDF
 
 .. math::
 
@@ -291,7 +291,9 @@ The parameter :math:`\sigma` is a scale parameter because I could define :math:`
 
 This is as if I squished the x-axis by a factor of :math:`\sigma`.
 
-In the Explorer, I will refer to :math:`\mu` not by its common name of "the mean," but instead as "the location parameter." This is because the word "mean" can have different meanings in different contexts, and using the term "location parameter" is unambiguous. Similarly, I will refer to :math:`\sigma` as the scale parameter and not the standard deviation. This is also consistent with the nomenclature in NumPy and SciPy.
+If a parameter is not a location or a scale parameter (or a function thereof), it is called a **shape** parameter, as it necessarily affects the shape of the CDF. The Normal distribution does not have a shape parameter.
+
+In the context of Normal distributions, in the Explorer, we will refer to :math:`\mu` not by its common name of "the mean," but instead as "the location parameter." This is because the word "mean" can have different meanings in different contexts, and using the term "location parameter" is unambiguous. Similarly, we will refer to :math:`\sigma` as the scale parameter and not the standard deviation. This is also consistent with the nomenclature in NumPy and SciPy.
 
 
 Moments

@@ -41,11 +41,27 @@ Probability density function
 .. math::
 
 	\begin{align}
-	f(y;\nu, \mu, \sigma) = \left\{\begin{array}{cll}
-    \frac{\Gamma\left(\frac{\nu+1}{2}\right)}{\Gamma\left(\frac{\nu}{2}\right)\sqrt{\pi \nu \sigma^2}}\left(1 + \frac{(y-\mu)^2}{\nu \sigma^2}\right)^{-\frac{\nu + 1}{2}} &  & y \ge \mu \\[1em]
-    0 & & \text{otherwise}.
-    \end{array}\right.
+	f(y;\nu, \mu, \sigma) = 
+    \frac{2\Gamma\left(\frac{\nu+1}{2}\right)}{\Gamma\left(\frac{\nu}{2}\right)\sqrt{\pi \nu \sigma^2}}\left(1 + \frac{(y-\mu)^2}{\nu \sigma^2}\right)^{-\frac{\nu + 1}{2}}.
 	\end{align}
+
+Note that the distribution is only supported for :math:`y \ge \mu`.
+
+----
+
+Cumulative distribution function
+--------------------------------
+
+.. math::
+
+    \begin{align}
+    F(y;\nu, \mu, \sigma) = \left\{ \begin{array}{cll}
+    \displaystyle{1 - I_{\nu/x^2 + \nu}\left(\frac{\nu}{2}, \frac{1}{2}\right)} & & y \ge \mu,\\[0.5em]
+    0 & & \text{otherwise},
+    \end{array}\right.
+    \end{align}
+
+where :math:`x = (y-\mu) / \sigma` and :math:`I_x(a, b)` denotes the :ref:`regularized incomplete beta function <Regularized incomplete beta function>`.
 
 ----
 
@@ -67,16 +83,17 @@ Usage
 +----------------------+--------------------------------------------------------------+
 | Package              | Syntax                                                       |
 +======================+==============================================================+
-| **NumPy**            | ``mu + sigma * np.abs(rg.standard_t(nu))``                   |
+| **NumPy**            | ``mu + sigma * np.abs(rng.standard_t(nu))``                  |
 +----------------------+--------------------------------------------------------------+
 | **SciPy sampling**   | ``mu + np.abs(scipy.stats.t.rvs(nu, 0, sigma))``             |
++----------------------+--------------------------------------------------------------+
+| **Distributions.jl** | ``mu .+ sigma .* rand(truncated(TDist(nu); lower=mu), x)``   |
 +----------------------+--------------------------------------------------------------+
 | **Stan sampling**    | ``real<lower=mu> y; y ~ student_t(nu, mu, sigma)``           |
 +----------------------+--------------------------------------------------------------+
 | **Stan rng**         | ``real<lower=mu> y; y = mu + fabs(student_t(nu, 0, sigma))`` |
 +----------------------+--------------------------------------------------------------+
-| **Distributions.jl** | ``mu .+ sigma .* rand(truncated(TDist(nu); lower=mu), x)``   |
-+----------------------+--------------------------------------------------------------+
+
 ----
 
 
@@ -122,4 +139,5 @@ Links
 - `Wikipedia <https://en.wikipedia.org/wiki/Folded-t_and_half-t_distributions>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.standard_t.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html>`_
-- `Stan <https://mc-stan.org/docs/2_21/functions-reference/student-t-distribution.html>`_
+- `Distributions.jl <https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.TDist>`_
+- `Stan <https://mc-stan.org/docs/functions-reference/student-t-distribution.html>`_

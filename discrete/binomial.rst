@@ -70,13 +70,7 @@ The CDF evaluated at integers :math:`n` with :math:`0 \le n \le N` is
 	F(n;N,\theta) = I_{1-\theta}(N - n, n + 1),
 	\end{align}
 
-where :math:`I_x(a, b)` is the `regularized incomplete beta function <https://en.wikipedia.org/wiki/Regularized_incomplete_beta_function>`_, given by
-
-.. math::
-
-	\begin{align}
-    I_x(a, b) = \frac{1}{B(a, b)}\,\int_0^x \mathrm{d}y\,y^{a-1}(1-y)^{b-1}.
-    \end{align}
+a :ref:`regularized incomplete beta function <Regularized incomplete beta function>`.
 
 ----
 
