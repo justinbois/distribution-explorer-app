@@ -77,18 +77,25 @@ Variance: :math:`\displaystyle{\frac{\alpha\beta}{(\alpha + \beta)^2(\alpha + \b
 Usage
 -----
 
-+----------------------+----------------------------------------------------+
-| Package              | Syntax                                             |
-+======================+====================================================+
-| **NumPy**            | ``rng.beta(alpha, beta)``                          |
-+----------------------+----------------------------------------------------+
-| **SciPy**            | ``scipy.stats.beta(alpha, beta)``                  |
-+----------------------+----------------------------------------------------+
-| **Distributions.jl** | ``Beta(alpha, beta)``                              |
-+----------------------+----------------------------------------------------+
-| **Stan**             | ``beta(alpha, beta)``                              |
-+----------------------+----------------------------------------------------+
-
++-------------------------------------------------+----------------------------------------------------+
+| Package                                         | Syntax                                             |
++=================================================+====================================================+
+| **NumPy**                                       | ``rng.beta(alpha, beta)``                          |
++-------------------------------------------------+----------------------------------------------------+
+| **NumPy with (φ, κ) parametrizaton**            | ``rng.beta(phi*kappa, (1-phi)*kappa)``             |
++-------------------------------------------------+----------------------------------------------------+
+| **SciPy**                                       | ``scipy.stats.beta(alpha, beta)``                  |
++-------------------------------------------------+----------------------------------------------------+
+| **SciPy with (φ, κ) parametrizaton**            | ``scipy.stats.beta(phi*kappa, (1-phi)*kappa)``     |
++-------------------------------------------------+----------------------------------------------------+
+| **Distributions.jl**                            | ``Beta(alpha, beta)``                              |
++-------------------------------------------------+----------------------------------------------------+
+| **Distributions.jl (φ, κ) parametrizaton**      | ``Beta(phi*kappa, (1-phi)*kappa)``                 |
++-------------------------------------------------+----------------------------------------------------+
+| **Stan**                                        | ``beta(alpha, beta)``                              |
++-------------------------------------------------+----------------------------------------------------+
+| **Stan with (φ, κ) parametrizaton**             | ``beta(phi*kappa, (1-phi)*kappa)``                 |
++-------------------------------------------------+----------------------------------------------------+
 
 
 ----
@@ -109,34 +116,37 @@ Notes
 - The case where :math:`\alpha = \beta = 0` is not technically a probability distribution because the PDF cannot be normalized. Nonetheless, it is often used as an improper prior, and this prior is known a Haldane prior, names after biologist `J. B. S. Haldane <https://en.wikipedia.org/wiki/J._B._S._Haldane>`_. The case where :math:`\alpha = \beta = 1/2`  is sometimes called a Jeffreys prior.
 - The Beta distribution may also be parametrized in terms of the location parameter :math:`\phi` and concentration :math:`\kappa`, which are related to :math:`\alpha` and :math:`\beta` as
 
-.. math::
-
-    \begin{align}
-    &\phi = \frac{\alpha}{\alpha + \beta}, \\
-    &\kappa = \alpha + \beta.
-    \end{align}
-
-The location parameter :math:`\phi` is the mean of the distribution and :math:`\kappa` is a measure of how broad it is. To convert back to an :math:`(\alpha, \beta)` parametrization from a :math:`(\phi, \kappa)` parametrization, use
-
-.. math::
-
-    \begin{align}
-    &\alpha = \phi \kappa, \\
-    &\beta = (1-\phi)\kappa.
-    \end{align}
-
-The mean and variance in terms of :math:`\phi` and :math:`\kappa` are
-
-Mean: :math:`\displaystyle{\phi}`
-
-Variance: :math:`\displaystyle{\frac{\phi(1-\phi)}{1+\kappa}}`.
-
+  .. math::
+  
+      \begin{align}
+      &\phi = \frac{\alpha}{\alpha + \beta}, \\
+      &\kappa = \alpha + \beta.
+      \end{align}
+  
+  The location parameter :math:`\phi` is the mean of the distribution and :math:`\kappa`   is a measure of how broad it is. To convert back to an :math:`(\alpha, \beta)`   parametrization from a :math:`(\phi, \kappa)` parametrization, use
+  
+  .. math::
+  
+      \begin{align}
+      &\alpha = \phi \kappa, \\
+      &\beta = (1-\phi)\kappa.
+      \end{align}
+  
+  The mean and variance in terms of :math:`\phi` and :math:`\kappa` are
+  
+  Mean: :math:`\displaystyle{\phi}`
+  
+  Variance: :math:`\displaystyle{\frac{\phi(1-\phi)}{1+\kappa}}`.
+  
 
 ----
 
 
 PDF and CDF plots
 -----------------
+
+
+In the α-β formulation:
 
 .. bokeh-plot::
     :source-position: none
@@ -145,6 +155,21 @@ PDF and CDF plots
     import distribution_explorer
 
     bokeh.io.show(distribution_explorer.explore('beta', background_fill_alpha=0, border_fill_alpha=0))
+
+
+|
+
+
+In the φ-κ formulation:
+
+.. bokeh-plot::
+    :source-position: none
+
+    import bokeh.io
+    import distribution_explorer
+
+    bokeh.io.show(distribution_explorer.explore('beta_phi_kappa', background_fill_alpha=0, border_fill_alpha=0))
+
 
 ----
 
