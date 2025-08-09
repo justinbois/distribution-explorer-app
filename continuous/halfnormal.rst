@@ -102,7 +102,7 @@ Usage
 Related distributions
 ---------------------
 
-- The :ref:`normal`, distribution is obviously closely related. The Half-Normal is simply a truncated Normal distribution where only values at the peak or to its right have nonzero probability density.
+- The :ref:`normal` distribution is obviously closely related. The Half-Normal is simply a truncated Normal distribution where only values at the peak or to its right have nonzero probability density.
 - The Half-Normal distribution is the :math:`\nu\to\infty` limit of the :ref:`half_student_t`.
 
 
@@ -128,7 +128,7 @@ PDF and CDF plots
     import bokeh.io
     import distribution_explorer
 
-    bokeh.io.show(distribution_explorer.explore('halfnormal', background_fill_alpha=0, border_fill_alpha=0))
+    bokeh.io.show(distribution_explorer.explore('half_normal', background_fill_alpha=0, border_fill_alpha=0))
 
 ----
 
@@ -138,5 +138,5 @@ Links
 - `Wikipedia <https://en.wikipedia.org/wiki/Half-normal_distribution>`_
 - `Numpy <https://docs.scipy.org/doc/numpy/reference/random/generated/numpy.random.Generator.normal.html>`_
 - `Scipy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.halfnorm.html#scipy.stats.halfnorm>`_
-- `Distribution.jl <https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.Normal>`_
+- `Distributions.jl <https://juliastats.org/Distributions.jl/stable/univariate/#Distributions.Normal>`_
 - `Stan <https://mc-stan.org/docs/functions-reference/normal-distribution.html>`_

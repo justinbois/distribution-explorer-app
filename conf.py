@@ -48,6 +48,12 @@ extensions = [
     'sphinx.ext.autosectionlabel',
     'nbsphinx',
     'bokeh.sphinxext.bokeh_plot',
+    'sphinx_copybutton',
+    'sphinx_togglebutton',
+    # 'sphinx.ext.viewcode',
+    # 'sphinx_tabs.tabs',
+    # 'sphinx-prompt',
+    # 'sphinx_toolbox',
 ]
 
 autodoc_default_options = {
